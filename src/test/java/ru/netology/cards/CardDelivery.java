@@ -14,8 +14,9 @@ public class CardDelivery {
 
     @Test
     void shouldOrderCardDelivery() {
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         //Configuration.browserSize = "900x600";
+        Configuration.headless = true;
         open("http://localhost:9999/");
         $("input[placeholder='Город']").setValue("Кострома");
         $("input[value='06.01.2023']").sendKeys(Keys.CONTROL + "A");
